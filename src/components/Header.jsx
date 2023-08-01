@@ -20,7 +20,7 @@ let [open, setOpen] = useState(false);
         </div>
 
         {/*Mobile menu icons*/}
-        <div onClick={() => setOpen(!open)} className='w-7 h-7 right-8 top-6 cursor-pointer md:hidden text-white absolute'>
+        <div onClick={() => setOpen(!open)} className='w-10 h-10 right-8 top-6 cursor-pointer md:hidden text-white absolute'>
           {
           open ? <XMarkIcon/> :  <Bars3BottomRightIcon/>
           }
@@ -32,7 +32,7 @@ let [open, setOpen] = useState(false);
         ease-in ${open ? "top-12" : "top-[-490px]"}`}>
 
           {
-            Links.map(link => <li key={link.name}className='md:ml-8 md:my-0 my-7 font-semibold'>
+            Links.map(link => <li key={link.name}className='md:ml-8 md:my-0 my-7 font-semibold cursor-pointer'>
               <Link
               to={link.link}
               activeClass='active'
